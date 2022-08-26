@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+INCLUDES="-Ilibmaxminddb/include -ICLI11/include"
+DEBUG="-g"
+LIBMAXMIND="maxminddb"
+STANDARD=c++20
+
+clang++ -std=$STANDARD $INCLUDES maxmind.cc geoip.cc -L. -l$LIBMAXMIND -o geoip
